@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/createProfileFragment">
+
+    <fragment
+        android:id="@+id/createProfileFragment"
+        android:name="com.example.madlevel7task1.CreateProfileFragment"
+        android:label="Create Profile"
+        tools:layout="@layout/activity_splash">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.madlevel7task1.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_create_profile">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/createProfileFragment" />
+    </fragment>
+</navigation>
